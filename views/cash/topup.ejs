@@ -1,0 +1,167 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/topup.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<script>
+  const selectCount = () => {
+    event.preventDefault();
+    document.querySelector(".choice") && document.querySelector(".choice").classList.toggle("choice");
+    event.currentTarget.classList.toggle("choice");
+  }
+</script>
+<div class="topup">
+  <div class="balance">
+    <span>나의 토리 캐시 잔액</span>
+    <img src="images/toricash.png" alt="">
+    <span><%= balance%></span><b>TC</b>
+  </div>
+  <div class="box">
+    <form class="direct">
+      <input type="text" placeholder="0">
+      <button>구매하기</button>
+      <span class="title"><b>CASH</b> 직접입력</span>
+    </form>
+    <div class="select">
+      <div class="content" onclick="selectCount()">
+        <div class="line">
+          <div class="left">
+            <img src="images/toricash.png" alt="">
+          </div>
+          <div class="right">
+            <p>10개</p>
+          </div>
+        </div>
+        <div class="line">
+          <div class="left">
+            <span></span>
+          </div>
+          <div class="right">
+            <p>₩1,100</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" onclick="selectCount()">
+        <div class="line">
+          <div class="left">
+            <img src="images/toricash.png" alt="">
+          </div>
+          <div class="right">
+            <p>50개</p>
+          </div>
+        </div>
+        <div class="line">
+          <div class="left">
+            <span></span>
+          </div>
+          <div class="right">
+            <p>₩5,500</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" onclick="selectCount()">
+        <div class="line">
+          <div class="left">
+            <img src="images/toricash.png" alt="">
+          </div>
+          <div class="right">
+            <p>100개</p>
+          </div>
+        </div>
+        <div class="line">
+          <div class="left">
+            <span></span>
+          </div>
+          <div class="right">
+            <p>₩11,000</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" onclick="selectCount()">
+        <div class="line">
+          <div class="left">
+            <img src="images/toricash.png" alt="">
+          </div>
+          <div class="right">
+            <p>150개</p>
+          </div>
+        </div>
+        <div class="line">
+          <div class="left">
+            <span>10% 할인</span>
+          </div>
+          <div class="right">
+            <p>₩13,200</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" onclick="selectCount()">
+        <div class="line">
+          <div class="left">
+            <img src="images/toricash.png" alt="">
+          </div>
+          <div class="right">
+            <p>300개</p>
+          </div>
+        </div>
+        <div class="line">
+          <div class="left">
+            <span>15% 할인</span>
+          </div>
+          <div class="right">
+            <p>₩25,500</p>
+          </div>
+        </div>
+      </div>
+      <div class="content" onclick="selectCount()">
+        <div class="line">
+          <div class="left">
+            <img src="images/toricash.png" alt="">
+          </div>
+          <div class="right">
+            <p>500개</p>
+          </div>
+        </div>
+        <div class="line">
+          <div class="left">
+            <span>30% 할인</span>
+          </div>
+          <div class="right">
+            <p>₩38,500</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="regular">
+      <div class="line">
+        <p>월 자동 충전권</p>
+      </div>
+      <div class="line">
+        <div class="left">
+          <p>210 <b>CASH</b></p>
+        </div>
+        <div class="right">
+          <p>18,000 <b>원( VAT포함 )</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="sub">
+      <p>매월 결제 금액만큼 자동 충전됩니다.</p>
+      <p>결제를 취소하실 경우 익월 취소로 승인됩니다.</p>
+      <p>월자동충전권으로 결제한 캐쉬는 3개월간만 유효하며, 사용하지 않은 만큼 자동 차감됩니다.</p>
+    </div>
+    <div class="significance">
+      <p>구매 전 필수 유의사항</p>
+      <ul>
+        <li>구매한 캐시의 유효기간은 구입일로부터 5년간 입니다.</li>
+        <li>캐시 구매/ 이용내역은 마이 페이지 보유 현황에서 확인이 가능합니다.</li>
+        <li>150개 이상 구매시 결제 방법에 따라 보너스 캐시를 제공할 수 있습니다.<br>(신용카드1%,계좌이체2%,가상계좌2%,무통장입금3%)</li>
+        <li>캐시구매 한도가 초과한 경우 구매 불가 합니다. (일 :10,000개 / 월 : 400,000개)</li>
+        <li>캐시구매 한도가 초과한 경우 선물이 불가합니다. (일 : 95,000개 / 월 : 300,000개)당일 한도는 23시59분59초 / 당월 한도는 매월 말일까지 적용 됩니다.</li>
+        <li>미성년자 가입자는 캐시 및 유료 아이템을 구매할 수 없습니다.</li>
+        <li>법정 대리인의 동의 없이 미성년자 명의로 결제한 캐시는 환불이 가능합니다.</li>
+        <li>사용하지 않은 캐시에 한에 구매 후 7일 이내 청약철회가 가능하며, 1:1문의 게시판에 신청해 주시기 바랍니다.</li>
+        <li>유료아이템의 내용 표시. 광고의 내용과 다르거나 계약 내용과 다게 이행된 경우에는 해당 유료 아이템을 공급 받은 날부터 3개월 이내, 그 사실을 안 날 또는 알수 있었던 날부터 30일 이내 청약 철회가 가능 합니다.</li>
+      </ul>
+    </div>
+  </div>
+</div>

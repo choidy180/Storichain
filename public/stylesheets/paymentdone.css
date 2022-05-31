@@ -1,0 +1,9 @@
+.paymentdone{
+  width: 358px;
+  height: auto;
+  padding: 40px 35px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
