@@ -1,9 +1,127 @@
 .paymentdone{
   width: 358px;
   height: auto;
+  min-height: 700px;
   padding: 40px 35px;
   background-color: white;
   margin-top: 20px;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box{
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 55px;
+}
+.box .title{
+  position: absolute;
+  padding-right: 18px;
+  background-color: white;
+  top: -0.5rem;
+  font-size: 1rem;
+  font-family: 'Tium';
+}
+.box .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.box .content .paymentTitle{
+  font-size: 1.4rem;
+  font-family: 'Tium';
+}
+.box .content img{
+  width: 60px;
+  color: #F2C572;
+  margin-top: 25px;
+  padding-bottom: 50px;
+}
+.box .content .item{
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  vertical-align: middle;
+}
+.box .content .item div{
+  font-family: 'Tium';
+  width: 125px;
+  color: #666666;
+  background-color: #EEEEEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.box .content .item .right{
+  width: 184px;
+  background-color: transparent;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'NEXON Lv2 Gothic';
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+  font-family: 'MinSans-Medium';
+}
+.box .content .item .right b{
+  margin-top: 2px;
+  font-size: 0.8rem;
+}
+.box .content .item .right div{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4px 0;
+  background-color: transparent;
+  color: #BDBDBD;
+}
+.box .content .btn{
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .content .btn button{
+  border-radius: 4px;
+  background-color: #DD4C4C;
+  border: none;
+  width: 100%;
+  min-width: 150px;
+  max-width: 200px;
+  padding: 10px 0;
+  color: white;
+  font-family: 'Tium';
+  font-size: 1rem;
+  margin-top: 30px;
+}
+.box .content .back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+.box .content .back img{
+  margin: 0;
+  padding: 0;
+  width: 19px;
+  cursor: pointer;
+}
+.box .content .back  span{
+  font-size: 1rem;
+  font-family: 'Tium';
+  color: #9F9F9F;
+  display: flex;
+  align-items: center;
 }
