@@ -24,4 +24,10 @@ router.get('/paymentdone', function(req, res, next) {
     page: "cash/paymentdone.ejs",
   });
 });
+router.get('/cashwallet', function(req, res, next) {
+  res.render('index', { 
+    title: 'Express', 
+    page: "cash/cashwallet.ejs",
+  });
+});
 module.exports = router;

@@ -1,0 +1,205 @@
+.cashwallet{
+  width: 358px;
+  height: auto;
+  min-height: 700px;
+  padding: 40px 35px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box{
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 55px;
+}
+.box .title{
+  position: absolute;
+  padding-right: 18px;
+  background-color: white;
+  top: -0.5rem;
+  font-size: 1rem;
+  font-family: 'NEXON Lv2 Gothic Bold';
+}
+.box .title b{
+  letter-spacing: -1px;
+}
+.box .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.box .content .haveCoin{
+  font-size: 2rem;
+  font-family: 'NEXON Lv2 Gothic Bold';
+  letter-spacing: -1.2px;
+}
+.box .content .haveCoin span{
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.box .breakdown{
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  margin-top: 105px;
+}
+.box .breakdown .breakdown_payment{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.box .breakdown .breakdown_payment .head{
+  position: relative;
+  z-index: 200;
+  padding: 12px 0;
+  width: calc(50% - 3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border: 2px solid #F4F4F4;
+  border-bottom: 0;
+  background-color: #F4F4F4;
+  color: #787878;
+  cursor: pointer;
+}
+.box .breakdown .breakdown_payment .head p{
+  font-size: 1rem;
+  font-family: 'Tium';
+}
+.box .breakdown .breakdown_payment .receipt{
+  position: relative;
+  z-index: 100;
+  margin-top: -2px ;
+  width: calc(100% - 24px);
+  padding: 15px 10px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border: 2px solid #E8E8E8;
+  background-color: white;
+  display: none;
+  justify-content: space-between;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px; */
+}
+.box .breakdown .breakdown_payment .receipt div{
+  width: 100%;
+}
+.box .breakdown .breakdown_payment .receipt p{
+  letter-spacing: -0.9px;
+  font-family: 'NEXON Lv2 Gothic Bold';
+  font-size: 0.72rem;
+  margin-top: 10px;
+}
+.box .breakdown .breakdown_payment .receipt .headTitle{
+  width: 100%;
+  color: #A0A0A0;
+  font-family: 'Tium';
+  padding-bottom: 15px;
+  border-bottom: 1.4px solid #DCDCDC;
+  font-size: 0.9rem;
+  margin-top: 0px;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox{
+  width: 100%;
+  height: auto;
+  padding: 5px 0;
+  border-bottom: 1px solid #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox:last-child{
+  border-bottom: 0;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox div{
+  width: 100%;
+  height: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox div:nth-child(1){
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox div:nth-child(2){
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div1:nth-child(1){
+  font-family: 'MinSans-Medium';
+  font-size: 0.8rem;
+  letter-spacing: -0.5px;
+  color: #A0A0A0;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div1:nth-child(2){
+  font-family: 'MinSans-Medium';
+  font-size: 1rem;
+  letter-spacing: -0.5px;
+  color: #A0A0A0;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div2 .chargeDetail{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 0.8rem;
+  color: #292929;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div3 .storyName{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 0.8rem;
+  color: #292929;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div3 .div3Coin{
+  font-family: 'NEXON Lv2 Gothic Bold';
+  font-size: 0.8rem;
+  color: #889AF8;
+  letter-spacing: -0.6px;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div4 .episode{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 0.8rem;
+  color: #292929;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div4 .totalCoin{
+  font-family: 'NEXON Lv2 Gothic Bold';
+  font-size: 0.8rem;
+  color: #292929;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox .div4 .totalCoin b{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 0.8rem;
+  color: #A0A0A0;
+  margin-right: 4px;
+}
+#focus .head{
+  border: 2px solid #E8E8E8;
+  border-bottom: 0;
+  z-index: 500;
+  background-color: white;
+  cursor: auto;
+  color: #000000;
+}
+#focus .receipt{
+  z-index: 300;
+  display: flex;
+}
+#addCoin{
+  color: #FF9284;
+}
