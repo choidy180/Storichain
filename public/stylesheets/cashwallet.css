@@ -1,7 +1,6 @@
 .cashwallet{
+  position: relative;
   width: 358px;
-  height: auto;
-  min-height: 700px;
   padding: 40px 35px;
   background-color: white;
   margin-top: 20px;
@@ -14,10 +13,11 @@
   height: auto;
   border-top: 1px solid #DCDCDC;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 55px;
+  padding-top: 30px;
 }
 .box .title{
   position: absolute;
@@ -31,11 +31,12 @@
   letter-spacing: -1px;
 }
 .box .content{
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
 }
 .box .content .haveCoin{
@@ -47,26 +48,66 @@
   font-size: 1rem;
   margin-left: 10px;
 }
+.box .payment_detail{
+  position: relative;
+  padding: 10px 0;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  background-color: #3B3B3B;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.box .payment_detail .detail{
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: center;
+  color: #FFFFFF;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+.box .payment_detail .detail span{
+  font-size: 0.55rem;
+  margin-top: -4px;
+  color: #D7D7D7;
+}
+.box .payment_detail .detail #cash_icon{
+  width: 25px;
+  margin-bottom: -10px;
+}
+.box .payment_detail .detail #cash_icon2{
+  margin-bottom: -2px;
+}
 .box .breakdown{
   position: relative;
   width: 100%;
   height: auto;
   min-height: 200px;
-  margin-top: 105px;
+  margin-top: 30px;
 }
 .box .breakdown .breakdown_payment{
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  top: 0;
   width: 100%;
+  height: auto;
+}
+.box .breakdown .breakdown_payment div{
+  width: 100%;
+  display: flex;
 }
 .box .breakdown .breakdown_payment .head{
   position: relative;
-  z-index: 200;
   padding: 12px 0;
-  width: calc(50% - 3px);
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,28 +117,29 @@
   border-bottom: 0;
   background-color: #F4F4F4;
   color: #787878;
-  cursor: pointer;
 }
 .box .breakdown .breakdown_payment .head p{
   font-size: 1rem;
   font-family: 'Tium';
+  cursor: pointer;
 }
 .box .breakdown .breakdown_payment .receipt{
   position: relative;
   z-index: 100;
   margin-top: -2px ;
   width: calc(100% - 24px);
-  padding: 15px 10px;
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px;
-  border: 2px solid #E8E8E8;
   background-color: white;
-  display: none;
+  display: flex;
+  height: 0;
+  overflow: hidden;
   justify-content: space-between;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px; */
 }
 .box .breakdown .breakdown_payment .receipt div{
   width: 100%;
+  flex-direction: column;
 }
 .box .breakdown .breakdown_payment .receipt p{
   letter-spacing: -0.9px;
@@ -131,6 +173,12 @@
   height: 17px;
   display: flex;
   justify-content: space-between;
+}
+.box .breakdown .breakdown_payment .receipt .contentbox div{
+  flex-direction: row;
+}
+.box .breakdown .breakdown_payment .receipt .box2 div{
+  flex-direction: row;
 }
 .box .breakdown .breakdown_payment .receipt .contentbox div:nth-child(1){
   width: 100%;
@@ -188,7 +236,7 @@
   color: #A0A0A0;
   margin-right: 4px;
 }
-#focus .head{
+#focus.head{
   border: 2px solid #E8E8E8;
   border-bottom: 0;
   z-index: 500;
@@ -196,9 +244,11 @@
   cursor: auto;
   color: #000000;
 }
-#focus .receipt{
+.receipt#focus_receipt{
   z-index: 300;
-  display: flex;
+  height: auto;
+  padding: 15px 10px;
+  border: 2px solid #E8E8E8;
 }
 #addCoin{
   color: #FF9284;

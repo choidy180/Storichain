@@ -3,9 +3,18 @@
 </head>
 <script>
   const targetChange = () => {
-    if(event.currentTarget.parentNode.id == "non_focus"){
+    if(event.target.parentNode.id == "non_focus"){
+      console.log(event.target.parentNode.id);
       document.getElementById("focus").id = "non_focus";
-      event.currentTarget.parentNode.id = "focus";
+      event.target.parentNode.id = "focus";
+      let receipt = document.querySelectorAll('.receipt');
+      if(receipt[0].id == "focus_receipt"){
+        receipt[0].id = "non-focus_receipt";
+        receipt[1].id = "focus_receipt";
+      } else {
+        receipt[1].id = "non-focus_receipt";
+        receipt[0].id = "focus_receipt";
+      }
     }
   }
 </script>
@@ -15,12 +24,35 @@
     <div class="content">
       <p class="haveCoin">1,000,000<span>TC</span></p>
     </div>
+    <div class="payment_detail">
+      <div class="detail">
+        <img src="images/icon/won.svg" alt="">
+        <p>충전액 ></p>
+        <p>10TC</p>
+      </div>
+      <div class="detail">
+        <img id="cash_icon" src="images/icon/coinplus.png" alt="">
+        <p>월구독액 ></p>
+        <p>10TC</p>
+        <span>{N}일뒤 소멸 예정</span>
+      </div>
+      <div class="detail">
+        <img id="cash_icon2" src="images/icon/coinplus.svg" alt="">
+        <p>적입액 ></p>
+        <p>10TC</p>
+      </div>
+    </div>
     <div class="breakdown">
-      <div class="breakdown_payment" id="focus">
-        <div class="head" onclick="targetChange()">
-          <p>결제 내역</p>
+      <div class="breakdown_payment">
+        <div class="head_box">
+          <div class="head" id="focus" onclick="targetChange()">
+            <p>결제 내역</p>
+          </div>
+          <div class="head" id="non_focus" onclick="targetChange()">
+            <p>사용 내역</p>
+          </div>
         </div>
-        <div class="receipt">
+        <div class="receipt" id="focus_receipt">
           <div class="date" style="width: 120%; text-align: left;">
             <p class="headTitle">결제 일시</p>
             <p>22.05.31. 16:00</p>
@@ -50,13 +82,8 @@
             <p>155</p>
           </div>
         </div>
-      </div>
-      <div class="breakdown_payment" id="non_focus" style="align-items:flex-end;">
-        <div class="head" onclick="targetChange()">
-          <p>사용 내역</p>
-        </div>
-        <div class="receipt" id="usageDetails" style="flex-direction: column;">
-          <div class="contentbox">
+        <div class="receipt" id="non_focus_receipt" style="flex-direction: column;">
+          <div class="contentbox box2">
             <div class="div1">
               <div>22.07.31 13:31</div>
               <div>사용</div>
