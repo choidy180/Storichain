@@ -160,10 +160,10 @@
   width: 100%;
   height: auto;
   padding: 5px 0;
-  border-bottom: 1px solid #DCDCDC;
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   gap: 4px;
+  border-bottom: 1px solid #D7D7D7;
 }
 .box .breakdown .breakdown_payment .receipt .contentbox:last-child{
   border-bottom: 0;
@@ -235,7 +235,7 @@
   font-size: 0.8rem;
   color: #A0A0A0;
   margin-right: 4px;
-}
+} 
 #focus.head{
   border: 2px solid #E8E8E8;
   border-bottom: 0;
