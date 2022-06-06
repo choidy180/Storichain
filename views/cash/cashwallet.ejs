@@ -17,6 +17,9 @@
       }
     }
   }
+  const moreview = () => {
+    document.querySelector("#focus_receipt").style.maxHeight="none";
+  }
 </script>
 <div class="cashwallet">
   <div class="box">
@@ -94,8 +97,10 @@
               <div class="storyName">만료</div>
               <div class="div3Coin">-210 TC</div>
             </div>
+            <div class="div4">
               <div class="episode">미 사용분 자동 소멸</div>
               <div class="totalCoin"><b>잔액</b>200,000,000,000TC</div>
+            </div>
             </div>
             <div class="contentbox">
               <div class="div1">
@@ -164,6 +169,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="more_view">
+          <p>결제내역 더보기</p>
+          <p onclick="moreview()">▼</p>
         </div>
       </div>
     </div>

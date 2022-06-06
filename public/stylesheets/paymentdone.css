@@ -115,8 +115,9 @@
 .box .content .back img{
   margin: 0;
   padding: 0;
-  width: 19px;
+  width: 24px;
   cursor: pointer;
+  margin-top: 4px;
 }
 .box .content .back  span{
   font-size: 1rem;

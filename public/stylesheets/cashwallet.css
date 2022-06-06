@@ -89,6 +89,10 @@
   height: auto;
   min-height: 200px;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .box .breakdown .breakdown_payment{
   position: relative;
@@ -236,6 +240,14 @@
   color: #A0A0A0;
   margin-right: 4px;
 } 
+.more_view{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
 #focus.head{
   border: 2px solid #E8E8E8;
   border-bottom: 0;
@@ -249,6 +261,7 @@
   height: auto;
   padding: 15px 10px;
   border: 2px solid #E8E8E8;
+  max-height: 348px;
 }
 #addCoin{
   color: #FF9284;
