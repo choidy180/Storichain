@@ -5,7 +5,7 @@
   background-color: #141414;
   color: white;
 }
-.nav .box{
+.nav .nav_box{
   width: 100%;
   max-width: 428px;
   padding: 8px 0;
@@ -13,17 +13,26 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border: none !important;
 }
-.nav .box div{
+.nav .nav_box div{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav .box .left{
+.nav .nav_box .left{
   justify-content: flex-start;
   gap: 8px;
 }
-.nav .box .right{
+.nav .nav_box .left img{
+  cursor: pointer;
+}
+.nav .nav_box .center{
+  /* 굵게 bold처리 */
+  width: 150%;
+  font-family: 'NEXON Lv2 Gothic Bold';
+}
+.nav .nav_box .right{
   justify-content: flex-end;
 }
