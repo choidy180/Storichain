@@ -38,9 +38,11 @@
   margin: 0;
   padding: 0;
 }
+html{
+}
 body {
   width: 100vw;
-  max-width: 100vw;
+  max-width: 100%;
   height: auto;
   min-height: 100vh;
   display: flex;
@@ -49,4 +51,11 @@ body {
   align-items: center;
   font-family: 'NEXON Lv2 Gothic';
   background-color: #EFEFEF;
+  box-sizing: border-box;
+}
+body .back_mask{
+  position: fixed;
+  height: 100%;
+  right: 0;
+  z-index: 5;
 }

@@ -1,4 +1,6 @@
 .checkout{
+  position: relative;
+  z-index: 10;
   width: 358px;
   height: auto;
   padding: 40px 35px;
@@ -115,13 +117,14 @@
 }
 .box .content .btn button{
   border-radius: 2px;
-  background-color: #DD4C4C;
+  background-color: #0A0A0A;
   border: none;
   width: 100%;
   padding: 10px 0;
   color: white;
   font-family: 'Tium';
   font-size: 1rem;
+  border-radius: 33px;
 }
 .box .content .btn button:last-child{
   background-color: #BEBEBE;

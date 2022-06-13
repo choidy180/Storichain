@@ -2,11 +2,14 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'>
     <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
   </head>
   <body>
+    <img class="back_mask" src="/images/Mask.svg" alt="">
     <%- include('nav.ejs') %>
     <%- include(page) %>
+    <%- include('footer.ejs') %>
   </body>
 </html>
