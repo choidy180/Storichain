@@ -34,4 +34,12 @@ router.get('/cashwallet', function(req, res, next) {
     head: "나의 캐시 지갑"
   });
 });
+
+router.get('/series', function(req, res, next) {
+  res.render('index', { 
+    title: 'Series', 
+    page: "series.ejs",
+    head: "Series"
+  });
+});
 module.exports = router;

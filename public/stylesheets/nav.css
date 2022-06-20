@@ -1,9 +1,16 @@
 .nav{
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: #141414;
   color: white;
+}
+.nav .navLogo{
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  height: 19px;
 }
 .nav .nav_box{
   width: 100%;
@@ -35,4 +42,12 @@
 }
 .nav .nav_box .right{
   justify-content: flex-end;
+}
+.nav ion-icon{
+  position: absolute;
+  right: 14px;
+  font-size: 20px;
+  top: 6px;
+  cursor: pointer;
+  z-index: 9999;
 }

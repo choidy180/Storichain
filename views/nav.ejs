@@ -1,4 +1,14 @@
+<script>
+  const themeChange = () => {
+    if(document.querySelector("body").dataset.theme === "dark"){
+      document.querySelector("body").dataset.theme = "light";
+    } else {
+      document.querySelector("body").dataset.theme = "dark";
+    }
+  }
+</script>
 <div class="nav">
+  <img src="/images/Logo.svg" class="navLogo" alt="">
   <div class="nav_box">
     <div class="left">
       <img src="/images/icon/BackBtn.svg" alt="">
@@ -7,6 +17,8 @@
     <div class="center">
       <%=head%>
     </div>
-    <div class="right"></div>
+    <div class="right">
+    </div>
   </div>
+  <ion-icon name="contrast-outline" onclick="themeChange()"></ion-icon>
 </div>

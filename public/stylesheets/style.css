@@ -40,6 +40,12 @@
 }
 html{
 }
+:root {
+  --background-base: #EFEFEF;
+}
+[data-theme='dark']{
+  --background-base: #1F1F1F;
+}
 body {
   width: 100vw;
   max-width: 100%;
@@ -50,8 +56,9 @@ body {
   justify-content: flex-start;
   align-items: center;
   font-family: 'NEXON Lv2 Gothic';
-  background-color: #EFEFEF;
+  background-color: var(--background-base);
   box-sizing: border-box;
+  transition: all .2s ease-in-out;
 }
 body .back_mask{
   position: fixed;
