@@ -53,13 +53,13 @@
         </div>
         <p class="distribution"><b>배급사</b> 씨엔믹스</p>
       </div>
+    </div>
+    <div class="right">
+      <p class="bookmark"><ion-icon name="bookmark-outline"></ion-icon> 북마크하기</p>
       <div class="notice">
         <p class="notice_title">작가의 공지</p>
         <p class="notice_content">이전 주 연재가 조금 늦었습니다.<br/>많은 양해 바랍니다. </p>
       </div>
-    </div>
-    <div class="right">
-      <p class="bookmark"><ion-icon name="bookmark-outline"></ion-icon> 북마크하기</p>
       <div class="content">
         <div class="tab">
           <script>
@@ -74,22 +74,55 @@
         </div>
         <div class="select">
           <script>
-            const select_click = () => {
-              if(event.target.name === "square-outline"){
-                event.target.name = "checkbox-outline";
-              } else {
-                event.target.name = "square-outline";
+            const selectAll = () => {
+            const checkTrue = document.querySelector("#checkbox-rect1").checked;
+            const checkboxes = document.getElementsByName('itemlist');
+              checkboxes.forEach((checkbox) => { 
+                if(checkTrue){
+                  checkbox.checked = true;
+                } else {
+                  checkbox.checked = false;
+                }
+              })
+            }
+            const checkItem = () => {
+              if(!event.target.checked){
+                document.querySelector("#checkbox-rect1").checked = false;
               }
+            }
+            const select_sort = () => {
+              document.querySelector(".selectBox").classList.toggle("focus");
+            }
+            const sort_choice = () => {
+              document.querySelector(".sort_type").innerText = event.target.innerText;
+              document.querySelector(".selectBox").classList.toggle("focus");
             }
           </script>
           <div class="select_nav">
-            <ion-icon name="square-outline" onclick="select_click()"></ion-icon>
-            <p>전체선택</p>
-            <p class="group"><ion-icon name="list-outline"></ion-icon><span>최신 순</span></p>
+            <div class="checkbox-rect">
+              <input type="checkbox" onclick='selectAll()' id="checkbox-rect1" name="check">
+              <label for="checkbox-rect1">전체선택</label>
+            </div>
+            <p class="group"><ion-icon onclick="select_sort()" name="list-outline"></ion-icon><span class="sort_type">최신 순</span></p>
+            <div class="selectBox">
+              <div>
+                <p onclick="sort_choice()">인기순</p>
+              </div>
+              <div>
+                <p onclick="sort_choice()">업데이트순</p>
+              </div>
+              <div>
+                <p onclick="sort_choice()">조회순</p>
+              </div>
+              <div>
+                <p onclick="sort_choice()">별점순</p>
+              </div>
+            </div>
           </div>
           <div class="select_list">
             <div class="item">
-              <ion-icon name="square-outline" onclick="select_click()"></ion-icon>
+              <input class="item_check" type="checkbox" id="list-label1" name="itemlist" onclick="checkItem()">
+              <label for="list-label1"></label>
               <div class="item_image">
                 <img src="/images/img/unnamed.png" alt="">
               </div>
@@ -101,7 +134,8 @@
               </div>
             </div>
             <div class="item">
-              <ion-icon name="square-outline" onclick="select_click()"></ion-icon>
+              <input class="item_check" type="checkbox" id="list-label2" name="itemlist" onclick="checkItem()">
+              <label for="list-label2"></label>
               <div class="item_image">
                 <img src="/images/img/61237892137236176123741.png" alt="">
               </div>
@@ -113,7 +147,8 @@
               </div>
             </div>
             <div class="item">
-              <ion-icon name="square-outline" onclick="select_click()"></ion-icon>
+              <input class="item_check" type="checkbox" id="list-label3" name="itemlist" onclick="checkItem()">
+              <label for="list-label3"></label>
               <div class="item_image">
                 <img src="/images/img/unnamed.png" alt="">
               </div>
@@ -125,7 +160,8 @@
               </div>
             </div>
             <div class="item">
-              <ion-icon name="square-outline" onclick="select_click()"></ion-icon>
+              <input class="item_check" type="checkbox" id="list-label4" name="itemlist" onclick="checkItem()">
+              <label for="list-label4"></label>
               <div class="item_image">
                 <img src="/images/img/61237892137236176123741.png" alt="">
               </div>
@@ -139,6 +175,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="more_view">
+    
     </div>
   </div>
 </div>
