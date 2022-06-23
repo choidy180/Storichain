@@ -84,8 +84,22 @@
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 }
+.series .box .left .imgbox .imageDark{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+}
 .series .box .left .imgbox :hover{
   transform: scale(1.05);
+}
+.series .box .left .imgbox p{
+  position: absolute;
+  z-index: 999999;
+  color: #fff;
+  bottom: 0;
+  left: 12px;
+  display: none;
 }
 .series .box .left .first_episode{
   width: 100%;
@@ -133,6 +147,38 @@
 .left .likeMark .mark ion-icon{
   color: #FD1C7B;
   margin-right: 8px;
+}
+.left .mobile_infoBox{
+  margin: 12px;
+  width: calc(100% - 24px);
+  padding: 20px 12px;
+  background-color: var(--box2);
+  box-sizing: border-box;
+  border-radius: 8.5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 14px;
+}
+.left .mobile_infoBox div{
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+  text-align: center;
+  row-gap: 6px;
+}
+.left .mobile_infoBox .head{
+  color: #9D9D9D;
+}
+.left .mobile_infoBox div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
 .series .box .left .plot{
   width: 100%;
@@ -723,4 +769,62 @@ html::-webkit-scrollbar-thumb{
 /* 스크롤바 뒷 배경 설정*/
 html::-webkit-scrollbar-track{
   background-color: var(--text-color1);
+}
+@media only screen and (max-width: 768px){
+  html{
+    overflow-x: hidden;
+  }
+  html::-webkit-scrollbar{
+    width: 0;
+  }
+  .back_mask{
+    display: none;
+  }
+  .series{
+    width: 100%;
+    padding: 0;
+  }
+  .series .box{
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 0;
+  }
+  .series .title{
+    display: none;
+  }
+  .series .box .left{
+    width: 100%;
+    margin: 0;
+  }
+  .series .box .left .imgbox{
+    border-radius: 0;
+    height: 80vw;
+  }
+  .series .box .left .imgbox .imageDark{
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      transparent,
+      transparent,
+      #000000,
+      #000000
+    )
+  }
+  .series .box .left .imgbox p{
+    position: absolute;
+    font-size: 2.6rem;
+    display: block;
+    color: #fff;
+    left: 18px;
+    bottom: 12px;
+    z-index: 999999;
+  }
+  .left .likeMark{
+    display: none;
+  }
+  .first_episode{
+    display: none !important;
+  }
 }
