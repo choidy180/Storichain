@@ -747,6 +747,7 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 .thumbnail_right{
   width: 30px;
@@ -826,5 +827,48 @@ html::-webkit-scrollbar-track{
   }
   .first_episode{
     display: none !important;
+  }
+  .plot{
+    display: none;
+  }
+  .plot_content{
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  .series .box .left .info{
+    display: none;
+  }
+  .series .box .left .writer_box{
+    display: none;
+  }
+  .series .box .right{
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .series .box .right .bookmark{
+    display: none;
+  }
+  .series .box .right .notice{
+    display: none;
+  }
+  .series .box .right .content .select{
+    align-items: center;
+  }
+  .more_view{
+    padding: 20px 34px;
+    border-radius: 0;
+  }
+  .series .box .right .content .select .more_view_btn{
+    width: 50%;
+  }
+  .thumbnail_left{
+    left: 4px;
+  }
+  .thumbnail_right{
+    right: 4px;
+    cursor: pointer;
+  }
+  .footer{
+    margin: 0;
   }
 }
