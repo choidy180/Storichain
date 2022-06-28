@@ -2,6 +2,7 @@
   position: relative;
   z-index: 10;
   width: 358px;
+  min-width: 350px;
   height: auto;
   min-height: 700px;
   padding: 40px 35px;
@@ -47,10 +48,9 @@
   padding-bottom: 50px;
 }
 .box .content .item{
-  width: calc(100% - 40px);
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
   vertical-align: middle;
 }
 .box .content .item div{
@@ -64,7 +64,7 @@
   padding: 10px 0;
 }
 .box .content .item .right{
-  width: 184px;
+  width: calc(100% - 135px);
   background-color: transparent;
   justify-content: center;
   flex-wrap: wrap;
@@ -128,4 +128,10 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+@media screen and (max-width:481px) {
+  .paymentdone{
+    width: calc(100% - 12px);
+  }
 }

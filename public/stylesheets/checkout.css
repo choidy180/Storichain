@@ -1,9 +1,11 @@
 .checkout{
   position: relative;
-  z-index: 10;
-  width: 358px;
+  z-index: 15;
+  max-width: 428px;
+  width: 100%;
+  min-width: 350px;
   height: auto;
-  padding: 40px 35px;
+  padding: 30px 16px 20px 16px;
   background-color: white;
   margin-top: 20px;
   border-radius: 16px;
@@ -18,11 +20,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .box .title{
   position: absolute;
-  padding-right: 18px;
+  padding-right: 8px;
   background-color: white;
   top: -0.5rem;
   font-size: 1rem;
@@ -36,84 +38,83 @@
   align-items: flex-start;
   gap: 10px;
 }
-.box .content .item{
-  width: calc(100% - 40px);
+.box .content .contentTitle{
+  font-size: 24px;
+  margin-top: 16px;
+  font-weight: 600;
+  color: #666666;
+}
+.box .content .priceContent{
+  width: 100%;
+  padding: 14px 0;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  vertical-align: middle;
+  font-size: 18px;
 }
-.box .content .item div{
-  font-family: 'Tium';
-  width: 125px;
+.box .content .priceContent span{
+  font-size: 14px;
+  color: #DD4C4C;
+}
+.box .content .selectMeansTitle{
+  font-size: 20px;
+  margin-top: 12px;
+  font-weight: 500;
   color: #666666;
-  background-color: #EEEEEE;
+}
+.box .content .selectMeans{
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 16px;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+.box .content .selectMeans .select{
+  margin-top: -.5px;
+}
+.box .content .selectMeans p:nth-child(2){
+  color: #DD4C4C;
+}
+.box .content .selectMeans ion-icon{
+  margin-bottom:  -3px;
+}
+.box .content .boxTab{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 6px;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+.box .content .boxTab div{
+  width: 32%;
+  padding: 12px 0;
+  color: #666666;
+  font-size: 14.5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-}
-.box .content .item .right{
-  width: 184px;
-  background-color: transparent;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  font-family: 'NEXON Lv2 Gothic';
-  border-top: 1px solid #DCDCDC;
-  border-bottom: 1px solid #DCDCDC;
-  font-family: 'MinSans-Medium';
-}
-.box .content .item .right b{
-  margin-top: 2px;
-  font-size: 0.8rem;
-}
-.box .content .item .right div{
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 4px 0;
-  background-color: transparent;
-  color: #BDBDBD;
-}
-.box .content .item .right input{
-  margin-left: 6px;
-}
-.label-select{
-  display: flex;
-  align-items: center; 
+  border: 1px solid #C5C5C5;
   cursor: pointer;
-  font-size:.9rem;
 }
-.label-select::after{
-  content: ""; 
-  display: flex; 
-  width: 10px; 
-  height: 10px; 
-  background: #ffffff; 
-  border: 3px solid #e0e0e0; 
-  margin-top: -4px;
-  margin-left: 3px;
-}
-.label-select::after{
-  border-radius: 50%;
-}
-.select-radio{
-  display: none;
-}
-.select-radio:checked + .label-select::after{
-  background: #f00;
-}
-.select-radio:checked + .label-select{
-  color: #141414;
+.box .content .boxTab div.focusTab{
+  border: 1px solid #DD4C4C;
 }
 .box .content .btn{
-  width: calc(100% - 40px);
-  padding: 0 20px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
+  margin-top: 24px;
 }
 .box .content .btn button{
   border-radius: 2px;
@@ -149,4 +150,9 @@
   list-style-type: disc;
   padding-left: -50px;
   margin-left: 15px;
+}
+@media screen and (max-width:481px) {
+  .checkout{
+    width: calc(100% - 20px);
+  }
 }

@@ -6,50 +6,48 @@
   <div class="box">
     <span class="title">구매상품명</span>
     <div class="content">
-      <div class="item">
-        <div class="left">상품명</div>
-        <div class="right">100&nbsp;<b>TC</b></div>
+      <p class="contentTitle">결제</p>
+      <div class="priceContent">
+        <p><span>TC</span> 100</p>
+        <p>11,000원</p>
       </div>
-      <div class="item">
-        <div class="left">가격</div>
-        <div class="right">11,000원 <b>(VAT포함)</b></div>
+      <script>
+        const selectChange = () => {
+          if(!document.getElementById("MeansType").classList.contains("focus")){
+            document.querySelector(".boxTab").style.height = "auto";
+            document.getElementsByName("chevron-down-outline")[0].setAttribute('name',"chevron-up-outline");
+          } else {
+            document.querySelector(".boxTab").style.height = "0";
+            document.getElementsByName("chevron-up-outline")[0].setAttribute('name',"chevron-down-outline");
+          }
+          document.getElementById("MeansType").classList.toggle("focus");
+        }
+      </script>
+      <p class="selectMeansTitle">결제 수단 선택</p>
+      <div class="selectMeans" onclick="selectChange()">
+        <p class="select">신용카드</p>
+        <p><span id="MeansType">변경</span><ion-icon id="selectIcon" name="chevron-down-outline"></ion-icon></p>
       </div>
-      <div class="item">
-        <div class="left">결제 방법</div>
-        <div class="right" style="justify-content: flex-start;">
-          <div>
-            <input type="radio" id="credit" class="select-radio" name="select" value="신용카드">
-            <label class="label-select" for="credit">신용카드</label>
-          </div>
-          <div>
-            <input type="radio" id="phone"  class="select-radio" name="select" value="휴대폰">
-            <label class="label-select" for="phone">휴대폰</label>
-          </div>
-          <div>
-            <input type="radio" id="account"  class="select-radio" name="select" value="계좌이체">
-            <label class="label-select" for="account">계좌이체</label>
-          </div>
-          <div>
-            <input type="radio" id="toss"  class="select-radio" name="select" value="토스">
-            <label class="label-select" for="toss">토스</label>
-          </div>
-          <div>
-            <input type="radio" id="naver"  class="select-radio" name="select" value="네이버페이">
-            <label class="label-select" for="naver">네이버페이</label>
-          </div>
-          <div>
-            <input type="radio" id="point"  class="select-radio" name="select" value="포인트">
-            <label class="label-select" for="point">포인트</label>
-          </div>
-          <div>
-            <input type="radio" id="kakao"  class="select-radio" name="select" value="카카오페이">
-            <label class="label-select" for="kakao">카카오페이</label>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="left">결제 아이디</div>
-        <div class="right">moon@storicha.in</div>
+      <script>
+        const boxTabClick = () => {
+          document.querySelector(".select").innerText = event.currentTarget.innerText;
+          document.querySelector(".focusTab").classList.remove("focusTab");
+          event.currentTarget.className = "focusTab";
+        }
+      </script>
+      <div class="boxTab">
+        <div onclick="boxTabClick()" class="focusTab">신용카드</div>
+        <div onclick="boxTabClick()">휴대폰</div>
+        <div onclick="boxTabClick()">계좌이체</div>
+        <div onclick="boxTabClick()">토스</div>
+        <div onclick="boxTabClick()">네이버페이</div>
+        <div onclick="boxTabClick()">포인트</div>
+        <div onclick="boxTabClick()">카카오페이</div>
+        <div onclick="boxTabClick()">페이코</div>
+        <div onclick="boxTabClick()">문화상품권</div>
+        <div onclick="boxTabClick()">도서문화상품권</div>
+        <div onclick="boxTabClick()">T-money</div>
+        <div onclick="boxTabClick()">OK 캐쉬백</div>
       </div>
       <div class="btn">
         <button>결제 하기</button>
