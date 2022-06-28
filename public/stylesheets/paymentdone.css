@@ -129,9 +129,8 @@
   align-items: center;
   cursor: pointer;
 }
-
 @media screen and (max-width:481px) {
   .paymentdone{
-    width: calc(100% - 12px);
+    width: calc(100% - 20px);
   }
 }
