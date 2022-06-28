@@ -804,6 +804,8 @@ html::-webkit-scrollbar-track{
     )
   }
   .series .box .left .mobile_image_title{
+    width: 100%;
+    text-align: left;
     position: relative;
     font-size: 2.6rem;
     font-weight: 700;
