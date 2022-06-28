@@ -3,19 +3,20 @@
 </head>
 <script>
   const targetChange = () => {
-    if(event.target.parentNode.id == "non_focus"){
-      console.log(event.target.parentNode.id);
-      document.getElementById("focus").id = "non_focus";
-      event.target.parentNode.id = "focus";
-      let receipt = document.querySelectorAll('.receipt');
-      if(receipt[0].id == "focus_receipt"){
-        receipt[0].id = "non-focus_receipt";
-        receipt[1].id = "focus_receipt";
-      } else {
-        receipt[1].id = "non-focus_receipt";
-        receipt[0].id = "focus_receipt";
-      }
-    }
+    console.log(event.currentTarget)
+    // if(event.target.parentNode.id == "non_focus"){
+    //   console.log(event.target.parentNode.id);
+    //   document.getElementById("focus").id = "non_focus";
+    //   event.target.parentNode.id = "focus";
+    //   let receipt = document.querySelectorAll('.receipt');
+    //   if(receipt[0].id == "focus_receipt"){
+    //     receipt[0].id = "non-focus_receipt";
+    //     receipt[1].id = "focus_receipt";
+    //   } else {
+    //     receipt[1].id = "non-focus_receipt";
+    //     receipt[0].id = "focus_receipt";
+    //   }
+    // }
   }
   const moreview = () => {
     document.querySelector("#focus_receipt").style.maxHeight="none";
@@ -45,6 +46,8 @@
         <p><b>10</b>TC</p>
       </div>
     </div>
+    <script>
+    </script>
     <div class="breakdown">
       <div class="breakdown_payment">
         <div class="head_box">

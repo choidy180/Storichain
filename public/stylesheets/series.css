@@ -94,11 +94,6 @@
   transform: scale(1.05);
 }
 .series .box .left .imgbox p{
-  position: absolute;
-  z-index: 999999;
-  color: #fff;
-  bottom: 0;
-  left: 12px;
   display: none;
 }
 .series .box .left .first_episode{
@@ -128,7 +123,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: 'NEXON Lv1 Gothic OTF';
 }
 .left .likeMark div{
   width: 100%;
@@ -149,8 +143,7 @@
   margin-right: 8px;
 }
 .left .mobile_infoBox{
-  margin: 12px;
-  width: calc(100% - 24px);
+  width: 100%;
   padding: 20px 12px;
   background-color: var(--box2);
   box-sizing: border-box;
@@ -160,6 +153,7 @@
   justify-content: flex-start;
   align-items: center;
   row-gap: 14px;
+  margin: 12px 0;
 }
 .left .mobile_infoBox div{
   width: 33.3%;
@@ -167,7 +161,7 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  color: #fff;
+  color: var(--text-color1);
   text-align: center;
   row-gap: 6px;
 }
@@ -185,7 +179,6 @@
   text-align: left;
   font-size: 1.4rem;
   color: var(--text-color1);
-  font-family: 'NEXON Lv2 Gothic';
   margin-top: 1rem;
 }
 .series .box .left .plot_content{
@@ -194,7 +187,6 @@
   font-size: 1.0rem;
   line-height: 1.5rem;
   color: var(--text-color1);
-  font-family: 'NEXON Lv1 Gothic OTF';
   margin-top: 12px;
 }
 .series .box .left .info{
@@ -221,12 +213,10 @@
   box-sizing: border-box;
 }
 .series .box .left .info div span{
-  font-family: 'NEXON Lv2 Gothic';
   color: var(--text-color2);
   font-size: 1.2rem;
 }
 .series .box .left .info div p{
-  font-family: 'NEXON Lv2 Gothic';
   color: var(--text-color1);
   font-size: 1.05rem;
   display: flex;
@@ -294,7 +284,6 @@
   margin-left: 4px;
   background-color: transparent;
   border: 1px solid #E9446C;
-  font-family: 'NEXON Lv1 Gothic OTF';
   font-size: 1rem;
   border-radius: 28px;
   cursor: pointer;
@@ -337,7 +326,6 @@
 .series .box .right .notice .notice_title{
   color: var(--text-color1);
   font-size: 1.2rem;
-  font-family: 'NEXON Lv2 Gothic Bold';
 }
 .series .box .right .notice .notice_content{
   font-size: 1.15rem;
@@ -524,7 +512,6 @@
   margin-top: 18px;
   background-color: var(--box2);
   color: var(--text-color1);
-  font-family: 'NEXON Lv2 Gothic Bold';
   font-size: 1.05rem;
   outline: none;
   border: none;
@@ -616,7 +603,6 @@
 }
 .series .box .right .content .select .select_list .item .item_text :nth-child(1){
   font-size: 1.2rem;
-  font-family: 'NEXON Lv2 Gothic Bold';
 }
 .series .box .right .content .select .select_list .item .item_text :nth-child(1) b{
   color: var(--text-color2);
@@ -798,10 +784,14 @@ html::-webkit-scrollbar-track{
   .series .box .left{
     width: 100%;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .series .box .left .imgbox{
     border-radius: 0;
-    height: 80vw;
+    height: 120vw;
   }
   .series .box .left .imgbox .imageDark{
     background: linear-gradient(
@@ -809,21 +799,37 @@ html::-webkit-scrollbar-track{
       transparent,
       transparent,
       transparent,
-      #000000,
-      #000000
+      var(--box1),
+      var(--box1)
     )
   }
-  .series .box .left .imgbox p{
-    position: absolute;
+  .series .box .left .mobile_image_title{
+    position: relative;
     font-size: 2.6rem;
+    font-weight: 700;
     display: block;
-    color: #fff;
+    color: var(--text-color1);
     left: 18px;
     bottom: 12px;
     z-index: 999999;
+    margin-top: -50vw;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
   }
+
   .left .likeMark{
-    display: none;
+    z-index: 999999;
+    position: relative;
+    justify-content: flex-start;
+    padding-left: 12px;
+    gap: 12px;
+  }
+  .left .likeMark div{
+    width: auto;
+  }
+  .left .mobile_infoBox{
+    z-index: 999999;
+    position: relative;
   }
   .first_episode{
     display: none !important;
@@ -834,12 +840,20 @@ html::-webkit-scrollbar-track{
   .plot_content{
     padding: 16px;
     box-sizing: border-box;
+    position: relative;
+    z-index: 999999;
+    margin: 0 !important;
   }
   .series .box .left .info{
     display: none;
   }
   .series .box .left .writer_box{
     display: none;
+  }
+  .left .mobile_infoBox{
+    padding: 12px;
+    width: calc(100% - 12px);
+    margin: 12px 0 !important;
   }
   .series .box .right{
     box-sizing: border-box;
@@ -858,8 +872,20 @@ html::-webkit-scrollbar-track{
     padding: 20px 34px;
     border-radius: 0;
   }
+  .series .box .right .content .tab{
+    padding: 0 !important;
+  }
+  .series .box .right .content .tab div{
+    padding: 10px 0 !important;
+  }
+  .checkbox-rect input[type="checkbox"] + label{
+    padding-left: 30px;
+  }
   .series .box .right .content .select .more_view_btn{
     width: 50%;
+  }
+  .series .box .right .content .select .select_list .item{
+    padding: 12px;
   }
   .thumbnail_left{
     left: 4px;
@@ -870,5 +896,35 @@ html::-webkit-scrollbar-track{
   }
   .footer{
     margin: 0;
+  }
+  .item button{
+    padding: 6px 20px !important;
+    font-size: 0.8rem !important;
+  }
+  .item_text span{
+    display: none !important;
+  } 
+  .series .box .right .content .select .select_list .item .item_text :nth-child(3){
+    font-size: 0.9rem;
+  }
+  .series .box .right .content .tab div{
+    font-size: 1.1rem;
+  }
+  .checkbox-rect input[type="checkbox"] + label:before{
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-bottom: -2px;
+  }
+  .checkbox-rect input[type="checkbox"]:checked + label:before{
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+  .item input[type="checkbox"] + label:before{
+    width: 1rem;
+    height: 1rem;
+  }
+  .item input[type="checkbox"]:checked + label:before{
+    width: 1rem;
+    height: 1rem;
   }
 }
