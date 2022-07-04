@@ -2,6 +2,7 @@
   <link rel="stylesheet" href="/stylesheets/series.css">
 </head>
 <div class="series">
+  <p class="mobile_bookmark"><ion-icon name="bookmark-outline"></ion-icon> 북마크하기</p>
   <div class="title">
     <p>양과 여우들의 밤</p>
   </div>
@@ -99,19 +100,58 @@
         <div class="select">
           <script>
             const selectAll = () => {
-            const checkTrue = document.querySelector("#checkbox-rect1").checked;
-            const checkboxes = document.getElementsByName('itemlist');
+              const checkTrue = document.querySelector("#checkbox-rect1");
+              const checkboxes = document.getElementsByName('itemlist');
               checkboxes.forEach((checkbox) => { 
-                if(checkTrue){
+                if(checkTrue.checked){
                   checkbox.checked = true;
                 } else {
                   checkbox.checked = false;
                 }
               })
+              checkTrue.classList.toggle("select_react_All");
+              const query = 'input[name="itemlist"]:checked';
+              const selectedElements = document.querySelectorAll(query);
+              const selectedElementsCnt = selectedElements.length;
+              document.querySelector(".result_count").innerText = selectedElementsCnt * 3;
+              document.querySelector(".result_coin").innerText = selectedElementsCnt;
+              const selectDiv = document.querySelector(".select");
+              if(selectedElementsCnt !== 0){
+                selectDiv.id = "view_Bill";
+                // document.querySelector(".select").style.marginBottom = "155px";
+              } else {
+                selectDiv.id = "";
+                // document.querySelector(".select").style.marginBottom = "0px";
+              };
             }
             const checkItem = () => {
               if(!event.target.checked){
                 document.querySelector("#checkbox-rect1").checked = false;
+              }
+              const query = 'input[name="itemlist"]:checked';
+              const selectedElements = document.querySelectorAll(query);
+              // 선택된 목록의 갯수 세기
+              const selectedElementsCnt = selectedElements.length;
+              const selectDiv = document.querySelector(".select");
+              if(selectedElementsCnt == 7){
+                document.querySelector(".checkbox-rect").checked = true;
+                document.querySelector(".checkbox-rect").id = "select_react_All";
+              } else {
+                document.querySelector(".checkbox-rect").id = "";
+              }
+              if(selectedElementsCnt != 0){
+                document.querySelector(".result_count").innerText = selectedElementsCnt * 3;
+                document.querySelector(".result_coin").innerText = selectedElementsCnt;
+                selectDiv.id = "view_Bill";
+                if(window.innerWidth > 768){
+                  // document.querySelector(".select").style.marginBottom = "155px";
+                  document.querySelector(".checkbox_result").style.marginBottom = "0px";
+                }
+              } else {
+                document.querySelector(".result_count").innerText = 0;
+                document.querySelector(".result_coin").innerText = 0;
+                selectDiv.id = "";
+                document.querySelector(".select").style.marginBottom = "0px";
               }
             }
             const select_sort = () => {
@@ -223,8 +263,8 @@
               </div>
             </div>
             <div class="item">
-              <input class="item_check" type="checkbox" id="list-label6" name="itemlist" onclick="checkItem()">
-              <label for="list-label6"></label>
+              <input class="item_check" type="checkbox" id="list-label7" name="itemlist" onclick="checkItem()">
+              <label for="list-label7"></label>
               <div class="item_image">
                 <img src="/images/img/61237892137236176123741.png" alt="">
               </div>
@@ -236,6 +276,17 @@
               </div>
             </div>
           </div>
+          <div class="checkbox_result">
+            <div>
+              <p>총 주문금액</p>
+              <p><span class="result_count">0</span>TC</p>
+              <p>총 &nbsp;<span class="result_coin">0</span>&nbsp;건</p>
+            </div>
+            <div>
+              <button>선택구매</button>
+            </div>
+            <ion-icon name="menu-sharp"></ion-icon>
+          </div>
           <script type="text/javascript">
             function more_view_content(){
               let obj = document.querySelector(".select");
@@ -245,6 +296,10 @@
           <button class="more_view_btn" onclick="more_view_content()"><ion-icon name="chevron-down-outline"/></ion-icon>&nbsp;작품 더 보기</button>
         </div>
       </div>
+    </div>
+    <div class="notice_mobile">
+      <p class="notice_title">작가의 공지</p>
+      <p class="notice_content">이전 주 연재가 조금 늦었습니다.<br/>많은 양해 바랍니다. </p>
     </div>
     <p class="more_view_title" style="color: white;">이 작가의 다른 작품</p>
     <div class="more_view">
@@ -323,5 +378,8 @@
       <ion-icon class="thumbnail_left" name="chevron-back-outline" onclick="more_view_left()"></ion-icon>
       <ion-icon class="thumbnail_right" name="chevron-forward-outline" onclick="more_view_left()"></ion-icon>
     </div>
+  </div>
+  <div class="list_back">
+    <p><ion-icon name="chevron-back-sharp"></ion-icon> 목록으로 돌아가기</p>
   </div>
 </div>

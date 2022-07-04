@@ -11,11 +11,13 @@
   left: 10px;
   top: 7px;
   height: 19px;
+  /* 로고 가림처리 */
+  display: none;
 }
 .nav .nav_box{
   width: 100%;
-  max-width: 428px;
-  padding: 8px 0;
+  max-width: 1200px;
+  padding: 8px 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
