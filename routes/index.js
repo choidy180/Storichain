@@ -42,4 +42,11 @@ router.get('/series', function(req, res, next) {
     head: "Series"
   });
 });
+router.get('/pay_set_up', function(req, res, next) {
+  res.render('index', { 
+    title: 'pay_set_up', 
+    page: "pay_set_up.ejs",
+    head: "pay_set_up"
+  });
+});
 module.exports = router;

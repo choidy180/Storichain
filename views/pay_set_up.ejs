@@ -1,0 +1,124 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/pay_set_up.css">
+</head>
+<div class="container">
+  <div class="topbox">
+    <script>
+      const activeChange = () => {
+        if(event.target.id === "active"){
+          return;
+        }
+        document.getElementById("active").id="";
+        event.target.id="active";
+      }
+    </script>
+    <div class="left">
+      <span id="active" onclick="activeChange()">시리즈 판매 설정</span>
+      <span onclick="activeChange()">에피소드 설정</span>
+    </div>
+    <div class="right">
+      <ion-icon name="settings-outline"></ion-icon>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box1">
+      <div class="left">
+        <div class="imgbox">
+          <img src="images/img/011454884a20ebe329565d653639090d.jpg" alt="">
+        </div>
+        <div>
+          <p class="title">사랑과 악마</p>
+          <p class="dateText">최종 임시 저장일 2022-06-31 11:00</p>
+          <p class="dateText">최종 판매 승인일 2022-06-31 11:00</p>
+        </div>
+      </div>
+      <script>
+        const activeCategoryChange = () => {
+          if(event.currentTarget.id === "activeCategory"){
+            return;
+          }
+          document.getElementById("activeCategory").id="";
+          event.currentTarget.id="activeCategory";
+        }
+      </script>
+      <div class="right">
+        <div class="btnbox">
+          <div onclick="activeCategoryChange()"><ion-icon name="book-outline"></ion-icon>읽기</div>
+          <div onclick="activeCategoryChange()"><ion-icon name="pencil-outline"></ion-icon>쓰기</div>
+          <div onclick="activeCategoryChange()" id="activeCategory"><ion-icon name="wallet-outline"></ion-icon>판매</div>
+        </div>
+        <p><span>배급사</span> 씨엠닉스</p>
+        <p><span>진행현황</span> 진행중</p>
+      </div>
+    </div>
+    <div class="box2">
+      <div class="togglebtn">
+        특정 에피소드만 가격을 차별화 하고싶나요?
+        <label class="toggler-wrapper style-1">
+          <input type="checkbox" >
+          <div class="toggler-slider">
+            <div class="toggler-knob"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="box3">
+      <div class="top">
+        <div class="headbox">
+          <img src="images/icon/info.svg" alt="">
+          <p class="head">기본 가격 판매정책</p>
+        </div>
+        <p class="headSub">본 세트에 포함 되는 모든 에피소드를 단일한 가격으로 설정 합니다. 예외로 가격을 달리하고 싶은 에피소드가 있을 경우 <br/>아래 예외 가격 판매 정책에서 설정 하실 수 있습니다. </p>
+      </div>
+      <div class="topbtn">
+        <p><span>판매 정책 추가 <ion-icon name="add-circle-outline"></ion-icon></span></p>
+        <p><span>수정</span><span>삭제</span></p>
+      </div>
+      <div class="content">
+        <div>
+          <span>판매 정책 제목</span>
+          <p>사랑과 악마</p>
+        </div>
+        <div class="line"></div>
+        <div>
+          <span>대여 정상가</span>
+          <p>10</p>
+        </div>
+        <div>
+          <span>사용여부</span>
+          <label class="toggler-wrapper-content style-1">
+            <input type="checkbox" >
+            <div class="toggler-slider">
+              <div class="toggler-knob"></div>
+            </div>
+          </label>
+        </div>
+        <div>
+          <span>대여 할인가</span>
+          <p>8</p>
+        </div>
+        <div>
+          <span>소장 정상가</span>
+          <p>10</p>
+        </div>
+        <div>
+          <span>소장 할인가</span>
+          <p>8</p>
+        </div>
+        <div>
+          <span>기다리면 무료 여부</span>
+          <p>+ 조회 후 2 일뒤
+          </p>
+        </div>
+        <div>
+          <span>사용시작</span>
+          <p>2022-06-31</p>
+        </div>
+        <div>
+          <span>사용종료</span>
+          <p>2022-06-31</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
