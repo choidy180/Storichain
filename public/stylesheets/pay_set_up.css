@@ -191,7 +191,7 @@
 }
 
 .toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
-  background-color: #626262;
+  background-color: #E9446C;
 }
 
 .toggler-wrapper .toggler-slider {
@@ -230,7 +230,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 48px;
+  margin-top: 36px;
+  /* box-shadow: var(--box2) 0px 3px 8px; */
 }
 .box3 .top{
   width: 100%;
@@ -247,6 +248,12 @@
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
+}
+.box3 .top .headbox p{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
 }
 .box3 .top img{
   width: 20px;
@@ -296,7 +303,7 @@
   align-items: flex-start;
   background-color: var(--box2);
   border-radius: 4px;
-  gap: 22px;
+  gap: 18px;
 }
 .box3 .content div{
   width: 100%;
@@ -309,7 +316,7 @@
   font-weight: 600;
   color: #969696;
 }
-.box3 .content div p{
+.box3 .content div .contentbox{
   position: absolute;
   right: 0;
   width: calc(100% - 400px);
@@ -318,6 +325,34 @@
   background-color: var(--box1);
   font-size: 18px;
   border-radius: 4px;
+  min-height: 33px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box3 .mdDelBtn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 12px;
+  gap: 18px;
+  font-size: 18px;
+  right: 4px;
+}
+.box3 .mdDelBtn button{
+  width: 50%;
+  outline: none;
+  border: none;
+  padding: 8.5px 0;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.box3 .mdDelBtn button:nth-child(1){
+  background-color: #E9446C;
+  color: #fff;
 }
 .line{
   width: 100%;
@@ -337,7 +372,7 @@
 }
 
 .toggler-wrapper-content input[type="checkbox"]:checked+.toggler-slider {
-  background-color: #141414;
+  background-color: #E9446C;
 }
 
 .toggler-wrapper-content .toggler-slider {
@@ -359,24 +394,138 @@
 }
 
 .toggler-wrapper-content.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
-  left: calc(100% - 14px - 3px);
+  left: calc(100% - 16px - 3px);
 }
 
 .toggler-wrapper-content.style-1 .toggler-knob {
-  width: calc(20px - 6px);
-  height: calc(20px - 6px);
+  width: calc(20px - 4px);
+  height: calc(20px - 4px);
   border-radius: 50%;
   left: 3px;
-  top: 3px;
+  top: 2px;
   background-color: #fff;
 }
+#unique{
+  position: relative;
+}
+.E9446C{
+  color: #E9446C !important;
+}
+.selectBox{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.selectBox select{
+  width: calc(100% - 114px);
+  padding: 8px 14px;
+  outline: none;
+  border: var(--box2) 1.4px solid;
+  background-color: transparent;
+  color: var(--text-color1);
+  border-radius: 4px;
+  appearance: none;
+}
+.selectBox ion-icon{
+  margin-left: -30px;
+}
+.selectBox button{
+  position: absolute;
+  right: 0px;
+  padding: 6.9px 18px;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: var(--box2);
+  color: var(--text-color1);
+  font-size: 16px;
+  width: 100px;
+  cursor: pointer;
+}
+.idxNumber{
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--text-color1);
+}
+.mainBtnBox{
+  margin-top: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.mainBtnBox button{
+  width: 40%;
+  padding: 12px;
+  border-radius: 28px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.E9446CBTN{
+  background-color: #E9446C;
+  color: #fff;
+}
+.progress{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+.progress .progressLine{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+.progress .progressBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.progress .progressBox ion-icon{
+  font-size: 52px;
+  color: var(--text-color2);
+}
+.progress .progressBox button{
+  padding: 8px 18px;
+  font-size: 16px;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--box2);
+  color: var(--text-color1);
+}
+.progress .progressContentLine{
+  width: 36%;
+  border-top: 4px solid var(--text-color2);
+  margin-top: 24px;
+}
+.progress .progressContentLine .completetLine{
+  position: absolute;
+  top: -4px;
+  left: 0;
+  border-top: 4px solid #E9446C;
+}
 @media only screen and (max-width: 1024px){
-  .box3 .content div p{
+  .box3 .content div .contentbox{
     width: calc(100% - 300px);
   }
 }
 @media only screen and (max-width: 768px){
-  .box3 .content div p{
+  .box3 .content div .contentbox{
     width: calc(100% - 150px);
   }
 }
