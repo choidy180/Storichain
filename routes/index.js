@@ -49,4 +49,11 @@ router.get('/pay_set_up', function(req, res, next) {
     head: "pay_set_up"
   });
 });
+router.get('/series_add', function(req, res, next) {
+  res.render('index', { 
+    title: '시리즈 추가', 
+    page: "series_add.ejs",
+    head: "series_add"
+  });
+});
 module.exports = router;
