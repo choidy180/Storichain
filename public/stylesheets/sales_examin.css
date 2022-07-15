@@ -1,0 +1,178 @@
+:root {
+  --box1: #FFFFFF;
+  --box2: #F7F7F7;
+  --text-color1: #1F1F1F;
+  --text-color2: #6C6C6C;
+  --menu-line: #DFDFDF;
+  --box-shadow: rgba(0, 0, 0, 0.16);
+}
+[data-theme='dark']{
+  --box1: #000000;
+  --box2: #282828;
+  --text-color1: #FFFFFF;
+  --text-color2: #D7D7D7;
+  --menu-line: #313131;
+  --box-shadow: transparent;
+}
+.container{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  min-height: calc(100vh - 240px);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.topbox{
+  width: 100%;
+  padding: 18px 30px;
+  background-color: var(--box1);
+  color: var(--text-color1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+}
+.topbox .left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.topbox .left span{
+  border-bottom: 3px solid transparent;
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 !important;
+}
+.topbox .right{
+  justify-content: flex-end;
+}
+.topbox .right{
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color2);
+}
+.box{
+  padding: 30px 30px 120px 30px;
+  width: 100%;
+  background-color: var(--box1);
+  color: var(--text-color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 15px;
+  margin-top: 24px;
+}
+.boxTitle{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  padding-bottom: 4px;
+  border-bottom: 3px solid #EBEBEB;
+}
+.boxTitle span{
+  font-size: 16px;
+  margin-left: 12px;
+  font-weight: 700;
+  font-family: 'NEXON Lv2 Gothic';
+  letter-spacing: -.4px;
+}
+.boxTitle b{
+  position: absolute;
+  right: 0;
+  font-family: 'NEXON Lv2 Gothic';
+  color: var(--text-color2);
+  font-size: 18px;
+}
+.box .head{
+  width: 100%;
+  padding: 22px 34px;
+  background-color: var(--box2);
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.box .head#headShadow{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-top: 24px;
+}
+.box .head .title{
+  width: 280px;
+}
+.box .head .title p{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 20px;
+  font-weight: 700;
+}
+.box .head .date{
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.box .head .date p{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 20px;
+  font-weight: 700;
+}
+.box .head .date span{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color2);
+  letter-spacing: -.7px;
+}
+.box .head .update{
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.box .head .update p{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 20px;
+  font-weight: 700;
+}
+.box .head .update span{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 18px;
+  font-weight: 700;
+  color: #E9446C;
+  letter-spacing: -.7px;
+}
+.box .head .progress{
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.box .head .progress p{
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 20px;
+  font-weight: 700;
+}
+.box .head .progress span{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color2);
+  font-family: 'NEXON Lv2 Gothic';
+}
+.box .head .progress span ion-icon{
+  margin-right: 4px;
+  font-size: 24px;
+}

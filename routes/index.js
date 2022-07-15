@@ -56,4 +56,11 @@ router.get('/series_add', function(req, res, next) {
     head: "series_add"
   });
 });
+router.get('/sales_examin', function(req, res, next) {
+  res.render('index', { 
+    title: '판매심사', 
+    page: "admin/sales_examin.ejs",
+    head: "sales_examin"
+  });
+});
 module.exports = router;
