@@ -66,7 +66,7 @@
   cursor: pointer;
 }
 .box{
-  padding: 40px 30px;
+  padding: 40px 30px 120px 30px;
   width: 100%;
   background-color: var(--box1);
   color: var(--text-color1);
@@ -85,7 +85,7 @@
   font-family: 'NEXON Lv1 Gothic OTF';
 }
 .box .boxTitleSub{
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'NEXON Lv1 Gothic OTF';
   color: var(--text-color2);
   margin-top: 8px;
@@ -96,7 +96,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   margin-top: 14px;
 }
 .box2 .line{
@@ -187,7 +187,7 @@
   align-items: flex-start;
   color: var(--text-color2);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 17px;
   gap: 12px;
   margin-right: 2px;
 }
@@ -251,4 +251,168 @@
 }
 .viewPointer{
   display: flex !important;
+}
+.topSelect{
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.topSelect ion-icon{
+  font-size: 24px;
+  cursor: pointer;
+}
+.topSelect span {
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.listTop{
+  position: relative;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+}
+.listTop p{
+  position: absolute !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'NEXON Lv2 Gothic';
+}
+.listTop p ion-icon{
+  font-size: 24px;
+}
+.listTop p:nth-child(1){
+  left: 0;
+}
+.listTop p:nth-child(3){
+  right: 0;
+  cursor: pointer;
+}
+.listTop input{
+  padding: 9.5px 14px;
+  font-size: 16px;
+  font-family: 'NEXON Lv2 Gothic';
+  outline: none;
+  border-radius: 24px;
+  border: none;
+  background-color: var(--box2);
+  width: 240px !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.listTop #sortValue{
+  font-family: 'NEXON Lv2 Gothic';
+}
+.listTop {
+  border-bottom: 3px solid #DCDCDC;
+  padding-bottom: 12px;
+}
+.listTop #sortStori{
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute !important;
+  right: 0;
+  top: 20px;
+  width: auto;
+  background-color: var(--box1);
+  z-index: 9999999;
+  font-size: 18px;
+  font-family: 'NEXON Lv2 Gothic';
+  gap: 8px;
+  border-radius: 8px;
+}
+.listTop #sortStori p{
+  position: relative !important;
+  cursor: pointer;
+  transition: all ease-in-out .1s;
+}
+.listTop #sortStori p:hover{
+  color: #E9446C;
+}
+.listTop #sortStori.focus{
+  display: flex !important;
+}
+.list{
+  width: 100%;
+  padding: 10.5px 0;
+  border-bottom: 3px solid #DCDCDC;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list .imgBox{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+.list .imgBox img{
+  width: 100%;
+}
+.list p{
+  font-size: 20px;
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: bold;
+  color: var(--text-color1);
+}
+.list span{
+  font-family: 'NEXON Lv2 Gothic';
+  color: var(--text-color2);
+}
+.list .linkText{
+  position: absolute;
+  font-family: 'NEXON Lv2 Gothic';
+  right: 90px;
+  color: #c2c2c2;
+  font-size: 16px;
+}
+.list .copy{
+  position: absolute;
+  right: 50px;
+  font-size: 28px;
+  color: var(--text-color2);
+  cursor: pointer;
+}
+.list .plus{
+  position: absolute;
+  right: 8px;
+  font-size: 34px;
+  color: #E9446C;
+  cursor: pointer;
+}
+.absoluteBtn{
+  position: absolute;
+  padding: 8px 34.5px;
+  background-color: #B6B6B6;
+  color: #ffffff;
+  bottom: 42px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: 'NEXON Lv2 Gothic';
+  font-size: 20px;
+  border-radius: 24px;
+}
+.absoluteBtn#policy{
+  left: 40px;
+}
+.absoluteBtn#desk{
+  right: 40px;
 }
