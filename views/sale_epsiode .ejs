@@ -28,8 +28,24 @@
         var box = document.querySelector(`#priceSelectBox${event.currentTarget.id.slice(-1)}`);
         box.classList.toggle("viewPointer");
       }
+      const sortEpisode = () => {
+        document.querySelector("#sortEpisodeBox").classList.toggle("focusEposideBox");
+      }
+      const clickEposideSort = () => {
+        document.querySelector(".choiceSortEpisode").classList.toggle("choiceSortEpisode");
+        event.target.classList.toggle("choiceSortEpisode");
+        document.querySelector("#episodeValue").innerText = event.target.innerText;
+        document.querySelector("#sortEpisodeBox").classList.toggle("focusEposideBox");
+      }
     </script>
     <div class="box2">
+      <p class="sortEpisode" onclick="sortEpisode()"><ion-icon name="list-outline"></ion-icon><span id="episodeValue">최신순</span></p>
+      <div id="sortEpisodeBox">
+        <p class="choiceSortEpisode" onclick="clickEposideSort()">등록일 순 <ion-icon name="checkmark-outline"></ion-icon></p>
+        <p onclick="clickEposideSort()">기본 가격 우선순 <ion-icon name="checkmark-outline"></ion-icon></p>
+        <p onclick="clickEposideSort()">예외 가격 우선순 <ion-icon name="checkmark-outline"></ion-icon></p>
+        <p onclick="clickEposideSort()">무료 가격 우선순 <ion-icon name="checkmark-outline"></ion-icon></p>
+      </div>
       <div class="line">
         <div class="top">
           <div class="img">
@@ -52,8 +68,11 @@
             <p>장면수(2)</p>
             <p>캐릭터수(10)</p>
             <div id="priceSelectBox1" class="priceSelectBox" onmouseleave="priceSelectView()">
-              <p>기본 가격</p>
-              <p>예외 가격</p>
+              <p>기본 가격정책 적용</p>
+              <p>예외 가격정책 적용</p>
+              <p class="priceOptions">012 글자수 많은...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">010 단행 본 가격...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">009 드라마 대본...<ion-icon name="checkmark-outline"></ion-icon></p>
               <p>무료</p>
             </div>
           </div>
@@ -90,8 +109,11 @@
             <p>장면수(2)</p>
             <p>캐릭터수(10)</p>
             <div id="priceSelectBox2" class="priceSelectBox" onmouseleave="priceSelectView()">
-              <p>기본 가격</p>
-              <p>예외 가격</p>
+              <p>기본 가격정책 적용</p>
+              <p>예외 가격정책 적용</p>
+              <p class="priceOptions">012 글자수 많은...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">010 단행 본 가격...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">009 드라마 대본...<ion-icon name="checkmark-outline"></ion-icon></p>
               <p>무료</p>
             </div>
           </div>
@@ -128,8 +150,11 @@
             <p>장면수(2)</p>
             <p>캐릭터수(10)</p>
             <div id="priceSelectBox3" class="priceSelectBox" onmouseleave="priceSelectView()">
-              <p>기본 가격</p>
-              <p>예외 가격</p>
+              <p>기본 가격정책 적용</p>
+              <p>예외 가격정책 적용</p>
+              <p class="priceOptions">012 글자수 많은...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">010 단행 본 가격...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">009 드라마 대본...<ion-icon name="checkmark-outline"></ion-icon></p>
               <p>무료</p>
             </div>
           </div>
@@ -166,8 +191,11 @@
             <p>장면수(2)</p>
             <p>캐릭터수(10)</p>
             <div id="priceSelectBox4" class="priceSelectBox" onmouseleave="priceSelectView()">
-              <p>기본 가격</p>
-              <p>예외 가격</p>
+              <p>기본 가격정책 적용</p>
+              <p>예외 가격정책 적용</p>
+              <p class="priceOptions">012 글자수 많은...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">010 단행 본 가격...<ion-icon name="checkmark-outline"></ion-icon></p>
+              <p class="priceOptions">009 드라마 대본...<ion-icon name="checkmark-outline"></ion-icon></p>
               <p>무료</p>
             </div>
           </div>
