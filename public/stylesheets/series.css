@@ -442,22 +442,23 @@
 }
 
 .checkbox_result{
-  position: relative;
+  position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: -150px;
   left: 0;
   padding: 30px;
   padding-bottom: 14px;
   box-sizing: border-box;
   z-index: 9999999999;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #474747;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  transition: all ease-in-out .4s;
 }
 @media only screen and (max-width: 768px){
   .checkbox_result{
@@ -474,8 +475,7 @@
   margin-bottom: 0;
 }
 #view_Bill .checkbox_result{
-  margin-top: 36px;
-  display: flex;
+  bottom: 0;
 }
 #view_Bill .more_view_btn{
   margin-top: 10px;

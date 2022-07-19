@@ -111,6 +111,11 @@
   color: #AEAEAE;
   margin-top: 12px;
 }
+.box1 .left .tabletDateText{
+  color: #AEAEAE;
+  margin-top: 12px;
+  display: none;
+}
 .box1 .left div:nth-child(2) p:nth-child(2){
   margin-top: 24px;
 }
@@ -121,7 +126,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 .box1 .right .btnbox{
   display: flex;
@@ -174,7 +179,7 @@
   font-size: 18px;
 }
 .box2 .togglebtn{
-  margin-top: 12px;
+  margin-top: 28px;
   max-width: 500px;
 }
 .toggler-wrapper {
@@ -341,7 +346,7 @@
   right: 4px;
 }
 .box3 .mdDelBtn button{
-  width: 50%;
+  width: 100%;
   outline: none;
   border: none;
   padding: 8.5px 0;
@@ -457,9 +462,16 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
+  position: relative;
 }
-.mainBtnBox button{
-  width: 40%;
+.mainBtnBox div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainBtnBox div button{
+  width: 100%;
   padding: 12px;
   border-radius: 28px;
   outline: none;
@@ -471,13 +483,75 @@
   background-color: #E9446C;
   color: #fff;
 }
+.mainBtnBox .mainBtnBoxHidden{
+  width: 300px;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(calc(-100% - 20px));
+  background-color: #E7E6E3;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+}
+#focusFinal{
+  display: flex !important;
+}
+.mainBtnBox .mainBtnBoxHidden p{
+  font-size: 18px;
+  letter-spacing: -.6px;
+  color: #000000;
+  line-height: 20px;
+}
+.mainBtnBox .mainBtnBoxHidden textarea{
+  width: 100%;
+  height: 140px;
+  margin-top: 12px;
+  border: none;
+  outline: none;
+  padding: 12px;
+  padding-top: 18px;
+  font-size: 16px;
+  letter-spacing: -.6px;
+  color: #000000;
+  line-height: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px 0px inset;
+  resize: none;
+}
+.mainBtnBox .mainBtnBoxHidden button{
+  background-color: #7C7C7C;
+  font-size: 16px;
+  font-weight: bold;
+  width: auto;
+  padding: 8px 30px;
+  color: #FFFFFF;
+  margin-top: 12px;
+  z-index: 99999;
+}
+.mainBtnBox .mainBtnBoxHidden::after{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 50%;
+  bottom: -20px;
+  transform: translateX(50%) rotate(45deg);
+  background-color: #E7E6E3;
+  z-index: 999;
+  border-bottom-right-radius: 4px;
+}
 .progress{
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: flex;
   justify-content: center;
   align-items: center;
   margin-top: 24px;
+  gap: 0 !important;
 }
 .progress .progressLine{
   width: 100%;
@@ -485,17 +559,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 20px;
 }
 .progress .progressBox{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  width: auto;
+  position: relative;
+  cursor: pointer;
 }
 .progress .progressBox ion-icon{
-  font-size: 52px;
+  font-size: 56px;
   color: var(--text-color2);
 }
 .progress .progressBox button{
@@ -508,8 +584,39 @@
   background-color: var(--box2);
   color: var(--text-color1);
 }
+.progress .progressBox .requestBox{
+  position: absolute;
+  padding: 20px;
+  background-color: #FFD914;
+  color: #000000;
+  width: 300px;
+  z-index: 999999;
+  border-radius: 10px;
+  letter-spacing: -.85px;
+  cursor: auto;
+  transform: translateY(-100%);
+  display: none;
+}
+.correction:hover > .requestBox{
+  display: block !important;
+}
+.progress .progressBox .requestBox p{
+  z-index: 99999;
+}
+.progress .progressBox .requestBox::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 50%;
+  bottom: -25px;
+  transform: translateX(50%) rotate(45deg);
+  background-color: #FFD914;
+  z-index: 999;
+  border-bottom-right-radius: 4px;
+}
 .progress .progressContentLine{
-  width: 36%;
+  width: 10%;
   border-top: 4px solid var(--text-color2);
   margin-top: 24px;
 }
@@ -519,13 +626,117 @@
   left: 0;
   border-top: 4px solid #E9446C;
 }
+.hideBox{
+  display: none !important;
+}
+.mobileProgressLine{
+  display: none !important;
+  flex-direction: column;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+}
+.mobileProgressLine .progressLine{
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+}
+.mobileProgressLine #hideLine{
+  display: none !important;
+}
+.mobileProgressLine .progressBox{
+  width: 30% !important;
+}
+.mobileProgressLine .progressContentLine{
+  width: 30%;
+}
 @media only screen and (max-width: 1024px){
+  .dateText{
+    display: none;
+  }
+  .box1 .left .imgbox{
+    width: 300px;
+  }
+  .box1 .left .tabletDateText{
+    display: block;
+  }
   .box3 .content div .contentbox{
     width: calc(100% - 300px);
   }
+  .progress .progressLine{
+    flex-wrap: wrap;
+  }
+  #hideLine{
+    display: none !important;
+  }
+  .progress .progressBox{
+    width: 17%;
+  }
+  .progress .progressContentLine{
+    width: 18%;
+  }
+  #pcLine{
+    display: none !important;
+  }
+  .mobileProgressLine{
+    display: flex !important;
+  }
 }
 @media only screen and (max-width: 768px){
+  .box1{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box1 .left{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box1 .left .title{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 12px;
+  }
+  .dateText{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+  }
+  .box1 .left .tabletDateText{
+    display: none;
+  }
+  .box1 .left #second{
+    margin-top: 6px !important;
+  }
+  .box1 .left div:nth-child(2){
+    position: relative;
+    width: 100%;
+  }
+  .box1 .right {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 18px ;
+    gap: 12px;
+  }
+  .box1 .right p{
+    margin-top: 0 !important;
+  }
   .box3 .content div .contentbox{
     width: calc(100% - 150px);
+  }
+  .progress .progressBox button{
+    font-size: 14px;
+  }
+  .box2 .togglebtn{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 501px){
+  .box1 .right{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .box1 .right p{
+    font-size: 20px;
   }
 }

@@ -7,9 +7,9 @@
     "build": "pkg ."
   },
   "bin": {
-    "app" : "./bin/www"
+    "app": "./bin/www"
   },
-  "pkg":{
+  "pkg": {
     "assets": [
       "views/**/*",
       "public/**/*"
@@ -23,6 +23,6 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.16",
-    "sweetalert2": "^11.4.17"
+    "sweetalert2": "^11.4.23"
   }
 }

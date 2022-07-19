@@ -42,18 +42,18 @@ router.get('/series', function(req, res, next) {
     head: "Series"
   });
 });
-router.get('/pay_set_up', function(req, res, next) {
+router.get('/sale_policy', function(req, res, next) {
   res.render('index', { 
-    title: 'pay_set_up', 
-    page: "pay_set_up.ejs",
-    head: "pay_set_up"
+    title: 'sale_policy', 
+    page: "sale_policy.ejs",
+    head: "sale_policy"
   });
 });
-router.get('/series_add', function(req, res, next) {
+router.get('/sale_epsiode', function(req, res, next) {
   res.render('index', { 
     title: '시리즈 추가', 
-    page: "series_add.ejs",
-    head: "series_add"
+    page: "sale_epsiode .ejs",
+    head: "sale_epsiode "
   });
 });
 router.get('/sales_examin', function(req, res, next) {
